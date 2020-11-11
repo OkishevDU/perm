@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
-node_count=10
+node_count=5
 start_peer_port=6331
 start_public_port=8000
 path_to_app=/root/.cargo/bin/exonum-cryptocurrency-advanced
 
 cd backend && mkdir example && cd example
-$path_to_app generate-template common.toml --validators-count 10
+$path_to_app generate-template common.toml --validators-count 5
 
 for i in $(seq 0 $((node_count - 1)))
 do
@@ -18,7 +18,7 @@ for i in $(seq 0 $((node_count - 1)))
 do
   public_port=$((start_public_port + i))
   private_port=$((public_port + node_count))
-  $path_to_app finalize --public-api-address 0.0.0.0:${public_port} --private-api-address 0.0.0.0:${private_port} sec_$((i + 1)).toml node_$((i + 1))_cfg.toml --public-configs pub_1.toml pub_2.toml pub_3.toml pub_4.toml pub_5.toml pub_6.toml pub_7.toml pub_8.toml pub_9.toml pub_10.toml
+  $path_to_app finalize --public-api-address 0.0.0.0:${public_port} --private-api-address 0.0.0.0:${private_port} sec_$((i + 1)).toml node_$((i + 1))_cfg.toml --public-configs pub_1.toml pub_2.toml pub_3.toml pub_4.toml pub_5.toml
 done
 
 for i in $(seq 0 $((node_count - 1)))
