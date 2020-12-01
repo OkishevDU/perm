@@ -1,2 +1,2 @@
 killall -INT exonum-cryptocurrency-advanced
-kill `pidof python3.6`
+kill `pidof python3.6` 
