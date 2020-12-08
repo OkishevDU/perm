@@ -35,15 +35,15 @@ curl -H "Content-Type: application/json" --data @key_$N.json http://$IP4:8093/ap
 curl -H "Content-Type: application/json" --data @key_$N.json http://$IP4:8094/api/system/v1/peers
 curl -H "Content-Type: application/json" --data @key_$N.json http://$IP4:8095/api/system/v1/peers
 
-curl -H "Content-Type: application/json" --data @key_$N.json http://1$IP5:8091/api/system/v1/peers
-curl -H "Content-Type: application/json" --data @key_$N.json http://1$IP5:8092/api/system/v1/peers
-curl -H "Content-Type: application/json" --data @key_$N.json http://1$IP5:8093/api/system/v1/peers
-curl -H "Content-Type: application/json" --data @key_$N.json http://1$IP5:8094/api/system/v1/peers
-curl -H "Content-Type: application/json" --data @key_$N.json http://1$IP5:8095/api/system/v1/peers
+curl -H "Content-Type: application/json" --data @key_$N.json http://$IP5:8091/api/system/v1/peers
+curl -H "Content-Type: application/json" --data @key_$N.json http://$IP5:8092/api/system/v1/peers
+curl -H "Content-Type: application/json" --data @key_$N.json http://$IP5:8093/api/system/v1/peers
+curl -H "Content-Type: application/json" --data @key_$N.json http://$IP5:8094/api/system/v1/peers
+curl -H "Content-Type: application/json" --data @key_$N.json http://$IP5:8095/api/system/v1/peers
 
-curl -H "Content-Type: application/json" --data @key_$N.json http://1$IP6:8091/api/system/v1/peers
-curl -H "Content-Type: application/json" --data @key_$N.json http://1$IP6:8092/api/system/v1/peers
-curl -H "Content-Type: application/json" --data @key_$N.json http://1$IP6:8093/api/system/v1/peers
-curl -H "Content-Type: application/json" --data @key_$N.json http://1$IP6:8094/api/system/v1/peers
-curl -H "Content-Type: application/json" --data @key_$N.json http://1$IP6:8095/api/system/v1/peers
+curl -H "Content-Type: application/json" --data @key_$N.json http://$IP6:8091/api/system/v1/peers
+curl -H "Content-Type: application/json" --data @key_$N.json http://$IP6:8092/api/system/v1/peers
+curl -H "Content-Type: application/json" --data @key_$N.json http://$IP6:8093/api/system/v1/peers
+curl -H "Content-Type: application/json" --data @key_$N.json http://$IP6:8094/api/system/v1/peers
+curl -H "Content-Type: application/json" --data @key_$N.json http://$IP6:8095/api/system/v1/peers
 done
