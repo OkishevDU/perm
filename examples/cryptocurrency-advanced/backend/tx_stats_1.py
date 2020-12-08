@@ -171,8 +171,8 @@ def send_data_to_prometheus(metrics, avrg_tps, current_tps, last_height):
 
 def main():
     args = parse_arguments()
-    #hostname = get_hostname(args.node)
-    hostname = "http://192.168.101.38"
+    hostname = get_hostname(args.node)
+    #hostname = "http://192.168.101.37"
     public_port = 8200
     private_port = 8091
     if args.output:
@@ -183,7 +183,7 @@ def main():
     if not os.path.isfile(log_file_name):
         init_statistic_file(log_file_name)
 
-    blocks_url = "{}:{}/api/explorer/v1/blocks?count={}&add_blocks_time=true".format(
+    blocks_url = "{}/api/explorer/v1/blocks?count={}&add_blocks_time=true".format(
         hostname, public_port, count_blocks
     )
     stats_url = "{}:{}/api/system/v1/stats".format(hostname, private_port)
