@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 
-# This scripts outputs TPS stats in runtime
+# The script outputs TPS stats in runtime
 # Run example: ./tx_stats.py -n node.hostname.com:8080
 # Also possible to dump statistic into cvs files if you provide
-# path to file
+# path to the file
 # E.g. ./tx_stats.py -n node.hostname.com:8080 -o /path/to/stat.cvs
 
 import argparse
@@ -172,7 +172,7 @@ def send_data_to_prometheus(metrics, avrg_tps, current_tps, last_height):
 def main():
     args = parse_arguments()
     hostname = get_hostname(args.node)
-    #hostname = "http://192.168.101.37"
+    #hostname = "http://127.0.0.1"
     public_port = 8200
     private_port = 8091
     if args.output:
@@ -183,7 +183,7 @@ def main():
     if not os.path.isfile(log_file_name):
         init_statistic_file(log_file_name)
 
-    blocks_url = "{}/api/explorer/v1/blocks?count={}&add_blocks_time=true".format(
+    blocks_url = "{}:{}/api/explorer/v1/blocks?count={}&add_blocks_time=true".format(
         hostname, public_port, count_blocks
     )
     stats_url = "{}:{}/api/system/v1/stats".format(hostname, private_port)
