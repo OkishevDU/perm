@@ -1,7 +1,7 @@
 #!/bin/bash
 cd
 cd exonum/examples/cryptocurrency-advanced/backend
-rm -R example
+rm -Rf example
 mkdir example
 IP=$1
 exonum-cryptocurrency-advanced generate-template example/common.toml --validators-count 5
