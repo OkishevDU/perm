@@ -4,7 +4,7 @@ cd
 cd exonum/examples/cryptocurrency-advanced/backend
 rm -Rf example
 mkdir example
-IP=$1
+IP1=$1
 exonum-cryptocurrency-advanced generate-template example/common.toml --validators-count 5
 
 exonum-cryptocurrency-advanced generate-config example/common.toml example/26 --peer-address $IP1:6331 -n
