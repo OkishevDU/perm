@@ -5,7 +5,6 @@ IP2=$2
 IP3=$3
 IP4=$4
 IP5=$5
-IP6=$6
 cd
 cd exonum/examples/cryptocurrency-advanced/backend
 for N in 1 2 3 4 5
@@ -40,10 +39,4 @@ curl -H "Content-Type: application/json" --data @key_$N.json http://$IP5:8092/ap
 curl -H "Content-Type: application/json" --data @key_$N.json http://$IP5:8093/api/system/v1/peers
 curl -H "Content-Type: application/json" --data @key_$N.json http://$IP5:8094/api/system/v1/peers
 curl -H "Content-Type: application/json" --data @key_$N.json http://$IP5:8095/api/system/v1/peers
-
-curl -H "Content-Type: application/json" --data @key_$N.json http://$IP6:8091/api/system/v1/peers
-curl -H "Content-Type: application/json" --data @key_$N.json http://$IP6:8092/api/system/v1/peers
-curl -H "Content-Type: application/json" --data @key_$N.json http://$IP6:8093/api/system/v1/peers
-curl -H "Content-Type: application/json" --data @key_$N.json http://$IP6:8094/api/system/v1/peers
-curl -H "Content-Type: application/json" --data @key_$N.json http://$IP6:8095/api/system/v1/peers
 done
