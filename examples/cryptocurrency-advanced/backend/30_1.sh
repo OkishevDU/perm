@@ -1,4 +1,5 @@
 #!/bin/bash
+set -x
 cd
 cd exonum/examples/cryptocurrency-advanced/backend
 rm -Rf example
